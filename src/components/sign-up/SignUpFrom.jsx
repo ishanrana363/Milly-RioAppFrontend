@@ -125,15 +125,7 @@ const SignUpFrom = () => {
                 </button>
               </fieldset>
 
-              {/* Forgot Password */}
-              <div className="text-right mt-2  ">
-                <Link
-                  href="/forgot-password"
-                  className="text-yellow-500 text-sm"
-                >
-                  Forget password?
-                </Link>
-              </div>
+              
               {/* Login Button */}
               <button className="w-full bg-yellow-500 text-xl text-white font-bold py-3 mt-7 lg:mt-14 cursor-pointer rounded-lg">
               Sign up
