@@ -91,7 +91,7 @@ const Navbar = () => {
                   Explore <span className="text-[12px] ml-1">▼</span>
                 </button>
                 {isExploreOpen && (
-                  <ul className="absolute top-full left-0 w-[216px] text-[#000030]  mt-8 bg-white shadow-md">
+                  <ul className="absolute top-full left-0 w-[216px] py-4 text-[#000030] rounded-2xl  mt-8 bg-white shadow-md">
                     <li className="p-2 hover:bg-gray-200">
                       <Link href="/explore1">Fun Activities</Link>
                     </li>
@@ -123,7 +123,7 @@ const Navbar = () => {
                   Shop <span className="text-[12px] ml-1">▼</span>
                 </button>
                 {isShopOpen && (
-                  <ul className="absolute top-full left-0 w-[216px] text-[#000030]  mt-8 bg-white shadow-md">
+                  <ul className="absolute top-full left-0 w-[216px] text-[#000030] rounded-2xl py-4  mt-8 bg-white shadow-md">
                     <li className="p-2 hover:bg-gray-200">
                       <Link href="/shop1">Gift Sets</Link>
                     </li>
