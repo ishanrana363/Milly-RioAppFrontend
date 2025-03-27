@@ -25,7 +25,7 @@ const EmailFrom = () => {
     alert("Email sent successfully. Please check your email for further instructions.");
     setEmail("");
     setEmailFocused(false);
-    router.push("/ishan")
+    router.push("/otp-verify")
     
   };
 
