@@ -3,14 +3,40 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
+import { useRouter } from 'next/navigation'
+
+
 
 const EmailFrom = () => {
   const [email, setEmail] = useState("");
   const [emailFocused, setEmailFocused] = useState(false);
+  const router = useRouter()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // validate email
+    // if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    //   alert("Invalid email address");
+    //   return;
+    // }
+    // send email to server for verification
+    //...
+    alert("Email sent successfully. Please check your email for further instructions.");
+    setEmail("");
+    setEmailFocused(false);
+    router.push("/ishan")
+    
+  };
 
   return (
     <div className="flex flex-col lg:flex-row  items-center justify-center lg:gap-16 ">
-      <div className=" lg:mt-20 mt-[20%] ">
+      <div className=" lg:mt-20 mt-[20%] relative rounded-4xl  ">
+        <div className="  " >
+          <span className=" absolute -right-[7%] -top-2 w-14 h-14 rounded-full  cursor-pointer " >
+          <RxCross2 className=" text-yellow-400 shadow rounded-full  " size={24} />
+          </span>
+        </div>
         <div className="bg-white px-6 rounded-lg shadow-lg lg:w-[496px] w-full py-8  lg:py-16  ">
           {/* Title */}
           <h2 className="lg:text-[28px] text-xl  text-center text-[#000030] font-bold ">
@@ -51,13 +77,10 @@ const EmailFrom = () => {
               </fieldset>
 
               {/* verify Button */}
-              <button className="w-full text-xl bg-yellow-500 text-white font-bold py-3 mt-7 lg:mt-14 cursor-pointer rounded-lg">
+              <button onClick={handleSubmit} className="w-full text-xl bg-yellow-500 text-white font-bold py-3 mt-7 lg:mt-14 cursor-pointer rounded-lg">
                 Verify
               </button>
             </form>
-
-            
-
           </div>
         </div>
       </div>

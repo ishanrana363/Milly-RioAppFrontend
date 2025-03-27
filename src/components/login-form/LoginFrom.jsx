@@ -14,7 +14,7 @@ const LoginFrom = () => {
   return (
     <div className="flex flex-col lg:flex-row  items-center justify-center lg:gap-16 "  >
       <div className=" lg:mt-20 mt-[20%] ">
-        <div className="bg-white px-6 rounded-lg shadow-lg lg:w-[496px] w-full py-8  lg:py-16 border border-blue-200">
+        <div className="bg-white px-6 rounded-4xl shadow-lg lg:w-[496px] w-full py-8  lg:py-16 border border-blue-200">
           {/* Title */}
           <h2 className="lg:text-[28px] text-xl  text-center text-[#000030] font-bold ">
             Sign in
